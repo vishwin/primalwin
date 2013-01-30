@@ -1,0 +1,36 @@
+@navbarHeight: 40px;
+
+.navbar {
+	background-color: @navbarColour;
+	position: fixed;
+	left: 0;
+	right: 0;
+	top: 0;
+	margin: 0;
+	border-bottom: 2px solid @blue;
+	font-family: @navbarFontFamily;
+	.brand {
+		font-weight: 300;
+		font-size: @navbarBrandFontSize;
+		float: left;
+		display: block;
+		padding: ((@navbarHeight - @navbarBrandFontSize)/2) 0;
+		.normalDeadAnchor;
+	}
+	nav {
+		float: right;
+		font-size: @navbarLinkFontSize;
+		font-weight: 300;
+		a {
+			.normalDeadAnchor;
+			display: inline-block;
+			padding: ((@navbarHeight - @navbarLinkFontSize)/2) ((@navbarHeight - @navbarLinkFontSize)/2) ((@navbarHeight - @navbarLinkFontSize)/2 - 2px);
+			&:hover {
+				border-bottom: 4px solid @blueDark;
+			}
+			&:active {
+				border-bottom: 4px solid @blue;
+			}
+		}
+	}
+}
